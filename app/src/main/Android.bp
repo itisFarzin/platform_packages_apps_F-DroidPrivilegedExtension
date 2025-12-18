@@ -1,0 +1,24 @@
+prebuilt_etc {
+    name: "permissions_org.fdroid.fdroid.privileged.xml",
+    product_specific: true,
+    sub_dir: "permissions",
+    src: "permissions_org.fdroid.fdroid.privileged.xml",
+}
+
+android_app {
+    name: "F-DroidPrivilegedExtension",
+    product_specific: true,
+    privileged: true,
+    sdk_version: "current",
+    optimize: {
+        enabled: false,
+    },
+    srcs: [
+        "java/**/*.java",
+        "aidl/**/*.aidl",
+    ],
+    aidl: {
+        local_include_dirs: ["aidl"],
+    },
+    required: ["permissions_org.fdroid.fdroid.privileged.xml"],
+}
