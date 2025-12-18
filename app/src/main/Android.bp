@@ -1,13 +1,13 @@
 prebuilt_etc {
     name: "permissions_org.fdroid.fdroid.privileged.xml",
-    product_specific: true,
+    system_ext_specific: true,
     sub_dir: "permissions",
     src: "permissions_org.fdroid.fdroid.privileged.xml",
 }
 
 android_app {
     name: "F-DroidPrivilegedExtension",
-    product_specific: true,
+    system_ext_specific: true,
     privileged: true,
     sdk_version: "current",
     optimize: {
